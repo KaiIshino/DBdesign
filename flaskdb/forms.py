@@ -41,12 +41,42 @@ class AddReviewForm(FlaskForm):
             DataRequired(message="Comapany Name is required."),
         ],
     )
+
+    internname = StringField (
+        "Intern name",
+        validators = [
+            DataRequired(message="InternEvent Name is required."),
+        ],
+    )
+
     grade = IntegerField(
         "Grade (1~5)",
         validators = [
             DataRequired(message="Grade is required."),
         ],
     )
+
+    day = IntegerField(
+        "How long",
+        validators = [
+            DataRequired(message="Question that how long period is required."),
+        ],
+    )
+
+    experience = StringField(
+        "Experience",
+        validators = [
+            DataRequired(message="Experience is required."),
+        ],
+    )
+
+    link = StringField(
+        "Link",
+        validators = [
+            DataRequired(message="Link is required."),
+        ],
+    )
+
     cancel = ButtonField("Cancel")
     submit = SubmitField("Submit")
 
